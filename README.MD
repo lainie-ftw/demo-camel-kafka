@@ -1,5 +1,7 @@
 # Camel Kafka Demo
 
+(Forked from https://github.com/mmistretta/camel-spring-boot/camel-kafka-demo)
+
 Pre-Reqs For Running on OCP:
 
 1. Install AMQ Streams Operator
