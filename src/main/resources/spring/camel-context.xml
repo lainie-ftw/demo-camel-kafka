@@ -5,5 +5,17 @@
         <property name="brokers" value="cluster-kafka-bootstrap.amq-streams.svc:9092"/>
     </bean>
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
+        <route id="consumer-route">
+            <from id="kafka-consumer" uri="kafka:my-topic"/>
+            <log id="route-log" message="consumer >>> ${body}"/>
+        </route>
+        <route id="producer-route">
+            <from id="route-timer" uri="timer://foo?period=10000"/>
+            <setBody id="route-setBody">
+                <simple>Hello World from camel-context.xml with ID ${id}</simple>
+            </setBody>
+            <to id="_kafka1" uri="kafka:my-topic"/>
+            <log id="route-log-producer" message="producer >>> ${body}"/>
+        </route>
     </camelContext>
 </beans>
