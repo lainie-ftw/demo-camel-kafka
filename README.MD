@@ -1,6 +1,6 @@
 # Camel Kafka Demo
 
-(Forked from https://github.com/mmistretta/camel-spring-boot/camel-kafka-demo)
+(Forked from https://github.com/mmistretta/camel-spring-boot/tree/master/camel-kafka-demo)
 
 Pre-Reqs For Running on OCP:
 
