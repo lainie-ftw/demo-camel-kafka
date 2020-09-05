@@ -1,1 +1,0 @@
-# demo-camel-kafka
